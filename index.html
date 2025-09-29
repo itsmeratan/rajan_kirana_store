@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>**My Small Grocery Shop**</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <header>
+        <h1>**Welcome to My Small Grocery Shop**</h1>
+        <p>**Fresh fruits, vegetables, and daily essentials at affordable prices!**</p>
+    </header>
+    
+    <section id="products">
+        <h2>Our Products</h2>
+        <ul>
+            <li>**Apples - $1/kg**</li>
+            <li>**Bananas - $0.5/dozen**</li>
+            <li>**Milk - $2/liter**</li>
+            <li>**Bread - $1/loaf**</li>
+            <!-- Add more items here if you want, copy the <li> line -->
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>**Address: 123 Main Street, Your City**</p>
+        <p>**Phone: +123-456-7890**</p>
+        <p>**Email: yourshop@email.com**</p>
+        <p>**Open: Mon-Sat, 8AM-8PM**</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 **My Small Grocery Shop**</p>
+    </footer>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed: ', err));
+            });
+        }
+    </script>
+</body>
+</html>
